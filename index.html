@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cards</title>
+    <style>
+        *{
+           font-family: sans-serif;
+           --cardWidth: 300px;
+           --cardHeight: 400px;
+        }
+        .container{
+            position: absolute;
+            left: 5vw;
+            top: 8vh;
+        }
+        body{
+            background: rgb(222, 225, 226);
+        }
+        .cardWrapper{
+            position: absolute;
+            /* left: 40vw;
+            top: 25vh; */
+            width: var(--cardWidth);
+            height: var(--cardHeight);
+            background-color: ghostwhite;
+            border-radius: 4%;
+            overflow: hidden;
+            box-shadow: 0px 15px 20px rgba(0, 0, 20, 0.15);
+            transition: 0.3s;
+            transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+        }
+        .cardWrapper:hover{
+            transform: scale(1.1);
+            box-shadow: 0px 30px 40px rgba(0, 0, 20, 0.1);
+        }
+        .mainText{
+            position: relative;
+            top: 72.5%;
+            left: 8%;
+            margin: -1px;
+            padding: 3.5px;
+            z-index: 1;
+            /* border: 1px solid red; */
+        }
+        .cardType{
+            color: lightslategrey;
+            transition: 0.3s;
+        }
+        .cardWrapper:hover .cardType{
+            color: aliceblue;
+        }
+        .cardTitle{
+            font-size: 110%;
+            font-weight: bold;
+            padding-bottom: 20px;
+            transition: 0.3s;
+        }
+        .cardWrapper:hover .cardTitle{
+            color: aliceblue;
+        }
+        .author a{
+            text-decoration: none;
+            color: rgb(206, 67, 3);
+            transition: 0.1s;
+        }
+        .author a:hover{
+            color: rgb(58, 46, 230);
+        }
+        .author{
+            font-size: 85%;
+        }
+        .image{
+            position: absolute;
+            top: -20px;
+            transform: scale(1.0);
+            transform: scale(1);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 68%, 0% 68%);
+            filter: opacity(100%);
+            transition: 0.3s;
+            transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+        }
+        .cardWrapper:hover .image{
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            filter: opacity(65%);
+            transform: scale(1.1);
+        }
+        .highlight1{
+            position: relative;
+            top: 56.75%;
+            width: 0%;
+            height: 6.6%;
+            background-color:rgba(224, 41, 81, 0.8);
+            transition: 0.45s;
+            transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+        }
+        .cardWrapper:hover .highlight1{
+            width: 65%;
+        }
+
+        .highlight2{
+            position: relative;
+            top: 43.4%;
+            width: 0%;
+            height: 7.0%;
+            background-color: rgba(160, 43, 68, 0.8);
+            transition: 0.38s;
+            transition-delay: 0.1s;
+            transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+        }
+        .cardWrapper:hover .highlight2{
+            width: 30%;
+        }
+        .highlight3{
+            position: relative;
+            top:54.0%;
+            width: 0%;
+            height: 5%;
+            background-color: whitesmoke;
+            transition: 0.38s;
+            transition-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+        }
+        .cardWrapper:hover .highlight3{
+            width: 55%;
+        }
+        .card2{
+            position: absolute;
+            left: 350px;
+        }
+        .card2 .image{
+            position: absolute;
+            top: 2.3%;
+            transform: scale(1.1);
+        }
+        .card2 .highlight1{
+            background-color: rgba(111, 197, 72, 0.8);
+        }
+        .card2 .highlight2{
+            background-color: rgba(75, 145, 43, 0.8);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cardWrapper card1">
+            <p class="cardType mainText">Recipe</p>
+            <p class="cardTitle mainText">Vegan Spicy Pizza</p>
+            <p class="author mainText">by <a href="#">Sandy The Chef</a></p>
+            <img class="image" src="assets/pizza.jpg" alt="" width="300px">
+            <div class="highlight1"></div>
+            <div class="highlight2"></div>
+            <div class="highlight3"></div>
+        </div>
+        <div class="cardWrapper card2">
+                <p class="cardType mainText">Travel</p>
+                <p class="cardTitle mainText">Exotic Ella</p>
+                <p class="author mainText">by <a href="#">Major Krishantha</a></p>
+                <img class="image" src="assets/ella.jpg" alt="" width="300px">
+                <div class="highlight1"></div>
+                <div class="highlight2"></div>
+                <div class="highlight3"></div>
+        </div>
+    </div>
+</body>
+</html>
